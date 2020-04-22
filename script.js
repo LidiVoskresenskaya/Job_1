@@ -1,8 +1,8 @@
 "use strict";
 
 
-let money = +prompt("Ваш Ваш бюджет на месяц?", "рубли");
-let time = prompt("Введите дату в формате YYYY - MM - DD", "2020 - 04 - 20");
+let money = +prompt("Ваш Ваш бюджет на месяц?", "рубли"),
+    time = prompt("Введите дату в формате YYYY - MM - DD", "2020 - 04 - 20");
 
 let app = {
     budget: money,
@@ -12,9 +12,15 @@ let app = {
     income: [],
     savings: false,
 };
-app.expenses[prompt("Введите обязательную статью расходов в этом месяце:")] = +prompt("Во сколько обойдется?");
+let ex1 = prompt("Введите обязательную статью расходов в этом месяце:"),
+    ex2 = +prompt("Во сколько обойдется?"),
+    ex3 = prompt("Введите обязательную статью расходов в этом месяце:"),
+    ex4 = +prompt("Во сколько обойдется?");
 
-alert(app.budget/30);
+app.expenses[ex1] = ex2;
+app.expenses[ex3] = ex4;
+
+alert(app.budget / 30);
 //alert(app.timeData);
 
 console.log(app.expenses);
