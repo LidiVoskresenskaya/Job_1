@@ -14,21 +14,21 @@ let app = {
 };
 
 
-// for (let i = 0; i < 2; i++) {
-//     let a = prompt("Введите обязательную статью расходов в этом месяце:", ""),
-//         b = +prompt("Во сколько обойдется?", '');
+for (let i = 0; i < 2; i++) {
+    let a = prompt("Введите обязательную статью расходов в этом месяце:", ""),
+        b = +prompt("Во сколько обойдется?", '');
 
-//     if ((typeof (a)) === 'string' && (typeof (a)) != null && (typeof (b)) != null &&
-//         a != '' && b != '' && a.length < 50) {
-//         console.log('done');
-//         app.expenses[a] = b;
-//     } else if (confirm('У вас больше нет расходов в этом месяце?')) {
-//         console.log('ОК');
-//     } else {
-//         i--;
-//         console.log('i--');
-//     }
-// };
+    if ((typeof (a)) === 'string' && (typeof (a)) != null && (typeof (b)) != null &&
+        a != '' && b != '' && a.length < 50) {
+        console.log('done');
+        app.expenses[a] = b;
+    } else if (confirm('У вас больше нет расходов в этом месяце?')) {
+        console.log('ОК');
+    } else {
+        i--;
+        console.log('i--');
+    }
+};
 
 //Используем цинл While
 
@@ -51,23 +51,23 @@ let app = {
 
 // Используем цинкл DO ... Whili
 
-let i = 0;
-do {
-    let a = prompt("Введите обязательную статью расходов в этом месяце:", ""),
-        b = +prompt("Во сколько обойдется?", '');
-    if ((typeof (a)) === 'string' && (typeof (a)) != null && (typeof (b)) != null &&
-        a != '' && b != '' && a.length < 50) {
-        console.log('done');
-        app.expenses[a] = b;
-    } else if (confirm('У вас больше нет расходов в этом месяце?')) {
-        console.log('ОК');
-    } else {
-        i--;
-        console.log('i--');
-    }
-    i++;
-}
-while (i < 2);
+// let i = 0;
+// do {
+//     let a = prompt("Введите обязательную статью расходов в этом месяце:", ""),
+//         b = +prompt("Во сколько обойдется?", '');
+//     if ((typeof (a)) === 'string' && (typeof (a)) != null && (typeof (b)) != null &&
+//         a != '' && b != '' && a.length < 50) {
+//         console.log('done');
+//         app.expenses[a] = b;
+//     } else if (confirm('У вас больше нет расходов в этом месяце?')) {
+//         console.log('ОК');
+//     } else {
+//         i--;
+//         console.log('i--');
+//     }
+//     i++;
+// }
+// while (i < 2);
 
 console.log(app.expenses);
 
@@ -88,5 +88,3 @@ if (app.moneyPerDay < 100) {
 }
 
 console.log(app.expenses);
-
-
