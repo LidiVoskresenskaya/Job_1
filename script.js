@@ -73,25 +73,24 @@ let app = {
         }
     },
     chooseIncome: function () {
-        for (let i = 1; i <= 1; i++) {
-            let items = prompt("Что принесет дополнительный доход? (перечислите через запятую)", "");
-            if ((typeof (items)) === 'string' && (typeof (items)) != null && items != '') {
-                app.income = items.split(', '); // Перевод строки в массив
-                app.income.push(prompt('Может что-то еще?')); // Добавление элементов в конец массива
-            } else {
-                i--;
-            }
+        let items = prompt("Что принесет дополнительный доход? (перечислите через запятую)", "");
+        if ((typeof (items)) != 'string' || (typeof (items)) == null || items == '') {
+            console.log("Вы ввели некорректные данные или не ввели их вовсе");
+        } else {
+            app.income = items.split(', '); // Перевод строки в массив
+            app.income.push(prompt('Может что-то еще?')); // Добавление элементов в конец массива            }
             app.income.sort(); // Сортировка по алфавиту
         }
-        app.income.forEach(function (items, i, arr) {
-            alert("Способы доп. заработка: " + (i + 1) + '. ' + items);
+
+        app.income.forEach(function (itemmassive, i) {
+            alert("Способы доп. заработка: " + (i + 1) + '. ' + itemmassive);
         });
     }
 };
 
 for (let key in app) {
-    console.log("Наша программа включает в себя данные: " + key);
-};
+    console.log("Наша программа включает в себя данные: " + key + " - " + app[key]);
+}
 
 
 
